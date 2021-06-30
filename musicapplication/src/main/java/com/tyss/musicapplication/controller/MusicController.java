@@ -22,7 +22,7 @@ public class MusicController {
 	public ResponceDTO playAllSongs() {
 		
 		ResponceDTO response =new ResponceDTO();
-		List<MusicPlayerResponce> songs = service.getAllSongs();
+		List<MusicFiles> songs =  service.getAllSongs();
 		if (songs != null) {
 			response.setStatusCode(200);
 			response.setMessage("successes");
@@ -33,14 +33,7 @@ public class MusicController {
 			response.setMessage("data not found");
 		}
 		return response;
-//		MusicPlayerResponce musicPlayerResponce = new MusicPlayerResponce();
-//		musicPlayerResponce.setSong_ID(101);
-//		musicPlayerResponce.setAlbum_Name("prasanna");
-//		musicPlayerResponce.setArtist_Name("reddy");
-//		musicPlayerResponce.setDescription("this is my own object ");
-//		musicPlayerResponce.setSong_Location("c drive");
-//		musicPlayerResponce.setSong_Title("romantic");
-//		return musicPlayerResponce;
+
 	}
 	
 

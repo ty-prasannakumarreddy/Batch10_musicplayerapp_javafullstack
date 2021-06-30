@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonRootName;
+import com.tyss.musicapplication.beans.MusicFiles;
 
 import lombok.Data;
 
@@ -25,7 +26,7 @@ public class ResponceDTO {
 	private String message;
 	@JsonProperty("songs_info")
 	@XmlElement(name = "songs_info")
-	private List<MusicPlayerResponce> data;
+	private List<MusicFiles> data;
 	public int getStatusCode() {
 		return statusCode;
 	}
@@ -38,10 +39,10 @@ public class ResponceDTO {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	public List<MusicPlayerResponce> getData() {
+	public List<MusicFiles> getData() {
 		return data;
 	}
-	public void setData(List<MusicPlayerResponce> data) {
+	public void setData(List<MusicFiles> data) {
 		this.data = data;
 	}
 	
